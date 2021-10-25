@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links to css,fonts, all kind of styles ---->
+    <link rel="stylesheet" href= "css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <body>
+        <div class="header">
+
+
+    <div id="countdown">
+    <h1>Countdown until Opening Day</h1>
+    </div>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+  
+
+
+
+
+
+
+
+
+
+
+         <img src = "img\banner.jpg" style="width: 1000px; height: 300px; </h2>
+    </div>
+        
+     <nav class="header-nav--container">
+      <ul class="header-nav--list" id="main-nav">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="https://github.com/grund22">Portfolio</a></li>
+         <li><a href="About me.html">About</a></li>
+         <li><a href="contact.html">Contact</a></li>
+     </ul>
+    </nav >
+        
+    <div class="row">
+          <div class="column side" style= "background-color:  rgb(206, 19, 106) ;" >
+            <img src= "Img\jim.jpg" alt="jim" width: "25px" height: "25px">
+            <img src= "Img\jim 2.jpg" alt="jim2" width: "25px" height: "25px">
+
+        
+        </div>
+
+         <div class="column middle" style= "background-color:  rgb(206, 19, 106) ;" >
+          <h1> Full circle family business </h1> 
+          <p> Miss Bonnie's started being contructed Summer of 2021 with hopes of being open to the public by Summer 2022. 
+              Being a full service market & greenhouse, available for purchase will be but not limited to Annuals, Perrineals,
+              Trees, Herbs, Fruits, and vegetables. There will also be space to host different vendors from the area that will sell their crafts.
+
+          </p>
+          <h1>History of Miss Bonnie's </h1>
+          <p> Bonnie Travis was the eptimoy of a pioneer for forging her way as one of the first women entrepenuers in the small town of 
+              Mt. Washington Kentucky.  Bonnie started Travis Daycare in 1967 and was the first to start a preschool program with a certified 
+            teacher on her staff. Also, being the first daycare in the area. Over the daycare had expanded for her house to bigger spaces, and acquiring another 
+        location. Bonnie then decided to open a flower shop, then a balloon shop. She was responsible for establishing 4 businesses, a entrepenuer
+            way ahead of her time.
+      </p>
+          <h2> From growing families to everything else</h2>
+           <p> Miss Bonnie would serve food to children of the daycare with fruits and vegetables from her garden, which is the same exact land that the market today will be serving.
+
+          </p>
+        </div>
+
+        <div class="column side" style= "background-color:  rgb(206, 19, 106) ;" >
+         <img src= "Img\conservationist.jpg" alt="conservationist" width: "25px" height: "25px">
+         <img src= "Img\jars.jpg" alt="Jars" width: "25px" height: "25px">
+
+      </div>
+
+
+
+      <footer>
+
+      </footer>
+ </body>
+</html> 
