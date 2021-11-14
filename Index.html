@@ -10,101 +10,89 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/javascript.js" defer></script>
     <script src="js/script.js" defer></script>
-
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
-<div class="header">
-    <img src="img/banner.jpg" alt="banner" width="100%" height="100%">
+<!-- Header -->
+<div class="w3-content" style="max-width:1400px">
+    <div class="header">
+        <div class="w3-display-container w3-content" style="max-width:1500px;">
+            <img class="w3-image" src="img/banner.jpg" alt="banner" width="100%">
+            <div class="counting down">
+                <h1 class="w3-text-green " style="text-shadow:1px 1px 0 #444 ">
+                    <b>COUNTDOWN UNTIL OPENING DAY</b>
+                    <p id="demo">
+                    </p>
+                </h1>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="counting down">
-    <h1 class="w3-text-green" style="text-shadow:1px 1px 0 #444">
-        <b>COUNTDOWN UNTIL OPENING DAY</b></h1>
-    <h1 class="w3-text-green" style="text-shadow:1px 1px 0 #444">
-        <p id="demo"></p>
-    </h1>
-</div>
+</header>
 
 
+<!-- Grid -->
+<div class="w3-row">
+
+    <!---main-->
+    <div class="w3-col l8 s12">
+        <div class="w3-card-4 w3-margin w3-white">
+            <img src="Img\jars.jpg" alt="jars" style="width:auto 100%">
+            <div class="w3-container">
+                <h1>History of Miss Bonnie's </h1>
+                <p> Bonnie Travis was the eptimoy of a pioneer for forging her way as one of the first women entrepenuers in the small town of Mt. Washington Kentucky. Bonnie started Travis Daycare in 1967 and was the first to start a preschool program with
+                    a certified teacher on her staff. Also, being the first daycare in the area. Over the daycare had expanded for her house to bigger spaces, and acquiring another location. Bonnie then decided to open a flower shop, then a balloon shop.
+                    She was responsible for establishing 4 businesses, a entrepenuer way ahead of her time.
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-card-4 w3-margin w3-white">
+            <div class="w3-container"><img src="/jim2.jpg ">
+                <h1> Full circle family business </h1>
+                <p> Miss Bonnie' s started being contructed Summer of 2021 with hopes of being open to the public by Summer 2022. Being a full service market & greenhouse, available for purchase will be but not limited to Annuals, Perrineals, Trees, Herbs,
+                    Fruits, and vegetables. There will also be space to host different vendors from the area that will sell their crafts. </p>
+            </div>
+        </div>
+
+        <div class="w3-card-4 w3-margin w3-white">
+            <img src=" Img\conservationist.jpg " alt="conservationist " width="auto 100% " height="auto 100% ">
+            <div class="w3-container">
+                <h2> From growing families to everything else</h2>
+                <p> Miss Bonnie would serve food to children of the daycare with fruits and vegetables from her garden, which is the same exact land that the market today will be serving.
+                </p>
+            </div>
+        </div>
 
 
-<div class="row ">
-    <div class="column side " style="background-color:rgba(255, 149, 193, 0.575); ">
+        <div id="flowerlist"></div>
 
-        <div class="w3-third">
-            <div class="w3-card">
-                <img src="img/jim.jpg" style="width:200%">
-                <div class="w3-container">
-                    <h4>Jim and Caleb</h4>
+        <div class="w3-col l4">body>
+            <div class="w3-card w3-margin w3-margin-top">
+                <h1> What flower should I plant? </h1>
+                <div id="flowerDisplay "> </div>
+                <button onclick="newFlower()">Click for Flower</button> > </body>
+                <div class="w3-card w3-margin ">
+                    <form class="w3-container w3-blue w3-padding ">
+                        <h2>Input Form</h2>
+
+                        <p>
+                            <label>First Name</label>
+                            <input class="w3-input " type="text "></p>
+                        <p>
+                            <label>Last Name</label>
+                            <input class="w3-input " type="text "></p>
+                        <p>
+                            <label>Email</label>
+                            <input class="w3-input " type="text "></p>
+                    </form>
                 </div>
+
             </div>
         </div>
-        <br><br>
-        <br>
-        <div class="w3-third">
-            <div class="w3-card">
-                <img src="img/jim2.jpg" style="width:200%">
-                <div class="w3-container">
-                    <h4>Jim</h4>
-                </div>
-            </div>
-        </div>
+        <footer>
 
-    </div>
-
-    <div class="column middle " style="background-color:rgba(255, 149, 193, 0.575); ">
-        <h1> Full circle family business </h1>
-        <p> Miss Bonnie' s started being contructed Summer of 2021 with hopes of being open to the public by Summer 2022. Being a full service market & greenhouse, available for purchase will be but not limited to Annuals, Perrineals, Trees, Herbs, Fruits,
-            and vegetables. There will also be space to host different vendors from the area that will sell their crafts. </p>
-
-        <h1>History of Miss Bonnie's </h1>
-        <p> Bonnie Travis was the eptimoy of a pioneer for forging her way as one of the first women entrepenuers in the small town of Mt. Washington Kentucky. Bonnie started Travis Daycare in 1967 and was the first to start a preschool program with a certified
-            teacher on her staff. Also, being the first daycare in the area. Over the daycare had expanded for her house to bigger spaces, and acquiring another location. Bonnie then decided to open a flower shop, then a balloon shop. She was responsible
-            for establishing 4 businesses, a entrepenuer way ahead of her time.
-        </p>
-
-        <h2> From growing families to everything else</h2>
-        <p> Miss Bonnie would serve food to children of the daycare with fruits and vegetables from her garden, which is the same exact land that the market today will be serving.
-        </p>
-
-
-        <body>
-            <h1> What flower should I plant? </h1>
-            <div id="flowerDisplay">
-            </div>
-            <button onclick="newFlower()">Click for Flower</button>
-        </body>
-        <div class="w3-container w3-blue">
-            <h2>Input Form</h2>
-        </div>
-
-        <form class="w3-container">
-            <p>
-                <label>First Name</label>
-                <input class="w3-input" type="text"></p>
-            <p>
-                <label>Last Name</label>
-                <input class="w3-input" type="text"></p>
-            <p>
-                <label>Email</label>
-                <input class="w3-input" type="text"></p>
-        </form>
-
-
-    </div>
-
-
-    <div class="column side " style="background-color:rgba(255, 149, 193, 0.575); "> <img src="Img\conservationist.jpg " alt="conservationist " width="auto 100%" height="auto 100% ">
-        <img src="Img\jars.jpg " class="w3-border " alt="Jars " width="auto 100px " height="auto 100px " ;>
-    </div>
-</div>
-
-
-</div class="footer ">
-<p>Footer</p>
-</div>
-
+        </footer>
 
 </html>
