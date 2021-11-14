@@ -1,6 +1,15 @@
 /*Main styles */
 
-html {
+<style>body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Raleway", sans-serif
+}
+
+</style>html {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 10px;
