@@ -12,8 +12,6 @@ return name;
 
 
 
-
-
 fetch("flowerlist.json")
     .then(response => response.json())
     .then(data => {
