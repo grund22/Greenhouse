@@ -1,3 +1,37 @@
+//Date Countdown
+
+// Set the date we're counting down to
+var countDownDate = new Date("May 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+
+//Pick a flower section
+
 var flowers = [
     "Lily",
     "Daisy", "Lilac", "Rose", "Tulip",
@@ -5,10 +39,19 @@ var flowers = [
     "Orchid", "Sunflower", "Pansy", "Daffodil", "Forget me not", "Marigold", "Peony", "Petunia", "Stock", "Violet"
 ]
 
+
 function newFlower() {
-    var randomNumber = Math.floor(Math.random() * (flowers.length));
-    document.getElementById('flowerDisplay').innerHTML = flowers[randomNumber];
+    fetch('https://raw.githack.com/grund22/Greenhouse/main/flowerlist.json')
+        .then((response) => response.json())
+        .then((data) => {
+            const flowers = data.flowerlist;
+
+            var randomNumber = Math.floor(Math.random() * (flowers.length));
+            document.getElementById('flowerDisplay').innerHTML = flowers[randomNumber].name;
+        });
 }
+
+//Submit Form
 
 function showForm() {
     let formDiv = document.getElementById('signup-form')
@@ -21,15 +64,6 @@ function hideForm() {
     formDiv.classList.add('hide')
 }
 
-fetch("flowerlist.json")
-    .then(response => response.json())
-    .then(data => {
-        var flowerlist = document.getElementById('flowerlist')
-        for (var i = 0; i < data.length; i++) {
-            console.log(data[i])
-            flowerlist.innerHTML = flowerlist.innerHTML + '<div class="movie-wrapper"> <p>' + data[i].title + '</p> <img src ="../images/' + data[i].img + '"></div>'
-        }
-    })
 
 function saveDynamicDataToFile() {
 
@@ -38,6 +72,7 @@ function saveDynamicDataToFile() {
     var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });
     saveAs(blob, "dynamic.txt");
 }
+
 
 
 

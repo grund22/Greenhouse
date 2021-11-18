@@ -5,33 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
     <title>Flower Generator</title>
 </head>
 
-<body>
 
+
+<h2>Creating an Object from a JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+    const txt = '{"name":"John", "age":30, "city":"New York"}'
+    const obj = JSON.parse(txt);
+    document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
     <main>
         <div class="main-page">
-            <div class="flower form">
-                <div class="form">
+            <div class="flower-form">
+                <div class="flowers">
                     <label for="flower amount" class="form-headlines">How many flowers</label>
                     <select name="flower amount " class="dropdown ">
-                            <option value="1 ">1</option>
-                            <option value="2 ">2 </option>
-                            <option value="3 ">3</option>
-                            <option value="4 ">4</option>
+                            <option value="1">1</option>
+                            <option value="2">2 </option>
+                           <option value="3">3</option>
+                            <option value="4">4</option>
                     </select>
 
                     <label for="Category amount" class="form-headlines">What category</label>
-                    <select name="Catagory amount " class="dropdown ">
+                    <select name="Category amount " class="dropdown ">
                             <option value="1 ">Shrubs</option>
                             <option value="2 ">Container Plants</option>
                             <option value="3 ">Herbaceous Perennials</option>
                             <option value="4 ">Cacti & Succulents</option>
 
-                            </select>
+                     </select>
                     <label for="Name" class="form-headlines ">Name</label>
                     <select name="Name" class="dropdown ">
                             <option value="1">Azalea</option>
