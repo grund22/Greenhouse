@@ -1,3 +1,10 @@
+var flowers = [
+    "Lily",
+    "Daisy", "Lilac", "Rose", "Tulip",
+    "Lily of the Valley", "Carnations", "Stepganotis", "Gardenia", "Hydrangea",
+    "Orchid", "Sunflower", "Pansy", "Daffodil", "Forget me not", "Marigold", "Peony", "Petunia", "Stock", "Violet"
+]
+
 function newFlower() {
     fetch('https://raw.githack.com/grund22/Greenhouse/main/flowerlist.json')
         .then((response) => response.json())
@@ -8,6 +15,7 @@ function newFlower() {
             document.getElementById('flowerDisplay').innerHTML = flowers[randomNumber].name;
         });
 }
+
 
 function showForm() {
     let formDiv = document.getElementById('signup-form')
