@@ -6,7 +6,7 @@
 
 2. A second feature you will see is **"Retrieve data from an external API and display data in your app (such as with fetch() or with AJAX)".** If you scroll down the page, you will see this towards bottom right titled **"Weather"** and there is a weather application. When you click to see the weather icon it takes you to another page (Weather.html). Once here you put in the location you like, it will display the weather. You can load 10+ weather cards, and view them at the same time. This is accomplished by accessing the the openweather api and fetching data. 
 
-3. A third feature you will see is **"Read and parse an external file (such as JSON or CSV) into your application and display some data from that in your app".** You will see this under the section that says "Pick a flower to plant". Upon clicking a button that says "click here" a random flower will pop up from a json list. The Json list is one I have created with 20 different flowers.
+3. A third feature you will see is **"Read and parse an external file (such as JSON or CSV) into your application and display some data from that in your app".** You will see this under the section that says "Pick a flower to plant". Upon clicking a button that says "click here" a random flower will pop up from a external json list. 
 
 4. A fourth feature you will see it **"Create a form and save the values (on click of Submit button) to an external file.**. This is located at the very bottom of the page. It has a button that says "Sign Up" and Create an account underneath that. When you put in your email address it than stores it in a text file that is sent to myself.
 
