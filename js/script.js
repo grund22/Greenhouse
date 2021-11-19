@@ -1,13 +1,12 @@
-var flowers = [
-    "Lily",
-    "Daisy", "Lilac", "Rose", "Tulip",
-    "Lily of the Valley", "Carnations", "Stepganotis", "Gardenia", "Hydrangea",
-    "Orchid", "Sunflower", "Pansy", "Daffodil", "Forget me not", "Marigold", "Peony", "Petunia", "Stock", "Violet"
-]
-
 function newFlower() {
-    var randomNumber = Math.floor(Math.random() * (flowers.length));
-    document.getElementById('flowerDisplay').innerHTML = flowers[randomNumber];
+    fetch('https://raw.githack.com/grund22/Greenhouse/main/flowerlist.json')
+        .then((response) => response.json())
+        .then((data) => {
+            const flowers = data.flowerlist;
+
+            var randomNumber = Math.floor(Math.random() * (flowers.length));
+            document.getElementById('flowerDisplay').innerHTML = flowers[randomNumber].name;
+        });
 }
 
 function showForm() {
@@ -21,15 +20,7 @@ function hideForm() {
     formDiv.classList.add('hide')
 }
 
-fetch("flowerlist.json")
-    .then(response => response.json())
-    .then(data => {
-        var flowerlist = document.getElementById('flowerlist')
-        for (var i = 0; i < data.length; i++) {
-            console.log(data[i])
-            flowerlist.innerHTML = flowerlist.innerHTML + '<div class="movie-wrapper"> <p>' + data[i].title + '</p> <img src ="../images/' + data[i].img + '"></div>'
-        }
-    })
+
 
 function saveDynamicDataToFile() {
 
